@@ -5,20 +5,27 @@ using namespace std;
 
 int main() {
     int amount;
-    int bills[9] = {0};
     int bills500 = 0;
+    int bills200 = 0;
+    int bills100 = 0;
+    int bills50 = 0;
+    int bills20 = 0;
+    int bills10 = 0;
+    int bills5 = 0;
+    int bills2 = 0;
+    int bills1 = 0;
 
-    //cout << "Enter: ";
-    //cin >> amount;
+    cout << "Enter amount of money: ";
+    cin >> amount;
 
-    calculateBills(1200, bills[8], bills[7], bills[6], bills[5], bills[4], bills[3], bills[2], bills[1], bills[0]);
+    calculateBills(amount, bills500, bills200, bills100, bills50, bills20, bills10, bills5, bills2, bills1);
 
     cout << "Bill\tAmount\t\tBill\tAmount" << endl;
-    cout << "500\t" << bills[8] << "\t\t200\t" << bills[7] << endl;
-    cout << "100\t" << bills[6] << "\t\t50\t" << bills[5] << endl;
-    cout << "20\t" << bills[4] << "\t\t10\t" << bills[3] << endl;
-    cout << "5\t" << bills[2] << "\t\t2\t" << bills[1] << endl;
-    cout << "1\t" << bills[0] << endl;
+    cout << "500\t" << bills500 << "\t\t200\t" << bills200 << endl;
+    cout << "100\t" << bills100 << "\t\t50\t" << bills50 << endl;
+    cout << "20\t" << bills20 << "\t\t10\t" << bills10 << endl;
+    cout << "5\t" << bills5 << "\t\t2\t" << bills2 << endl;
+    cout << "1\t" << bills1 << endl;
 
 	return 0;
 }

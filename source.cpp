@@ -6,14 +6,30 @@ void calculateBills(int amount, int& bills500,
     int& bills10, int& bills5,
     int& bills2, int& bills1) {
 
-    int bills[] = { bills1, bills2, bills5, bills10, bills20, bills50, bills100, bills200, bills500 };
-    int nominals[] = { 1, 2, 5, 10, 20, 50, 100, 200, 500 };
-    int i = 8;
+    bills500 = amount / 500;
+    amount -= bills500 * 500;
 
-    while (i && amount) {
-        bills[i] += amount / nominals[i];
-        amount -= bills[i] * nominals[i];
-        i--;
-    }
+    bills200 = amount / 200;
+    amount -= bills200 * 200;
 
+    bills100 = amount / 100;
+    amount -= bills100 * 100;
+
+    bills50 = amount / 50;
+    amount -= bills50 * 50;
+
+    bills20 = amount / 20;
+    amount -= bills20 * 20;
+
+    bills10 = amount / 10;
+    amount -= bills10 * 10;
+
+    bills5 = amount / 5;
+    amount -= bills5 * 5;
+
+    bills2 = amount / 2;
+    amount -= bills2 * 2;
+
+    bills1 = amount / 1;
+    amount -= bills1 * 1;
 }
